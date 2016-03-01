@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="Quotes" customModuleProvider="target">
+            <connections>
+                <outlet property="textLabel" destination="kch-cp-rq0" id="Eut-ci-qiX"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wq-Ie-Fb3">
+                    <rect key="frame" x="420" y="22" width="40" height="228"/>
+                    <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" image="NSGoRightTemplate" imagePosition="overlaps" alignment="right" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MmN-Gb-dQx">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" accelerator="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goRight:" target="-2" id="sCX-dn-O85"/>
+                    </connections>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-2V-NHZ">
+                    <rect key="frame" x="20" y="20" width="28" height="232"/>
+                    <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jyj-dN-GcN">
+                        <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goLeft:" target="-2" id="P8T-US-B6a"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-sl-bTO">
+                    <rect key="frame" x="177" y="15" width="113" height="32"/>
+                    <buttonCell key="cell" type="push" title="Quit Quotes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pfB-Wf-YOM">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="quit:" target="-2" id="X72-S0-sA6"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kch-cp-rq0">
+                    <rect key="frame" x="59" y="100" width="348" height="72"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Never put off until tomorrow what you can do the day after tomorrow." id="hLK-XW-Sxs">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+    </resources>
+</document>
